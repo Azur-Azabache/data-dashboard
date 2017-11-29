@@ -12,29 +12,80 @@
 </header>
 <nav>
   <form id="navbar">
-    <select id="mySelect" onchange="myFunction()">
+    <select id="mySelect">
       <option value="Seleccione">Seleccione
-      <option value="lima2016II">Lima 2016-II
-      <option value="lima2017I">Lima 2017-I
-      <option value="lima2017II">Lima 2017-II
-      <option value="aqp2016II">Arequipa 2016-II
-      <option value="aqp2017I">Arequipa 2017-I
-      <option value="scl2016II">Santiago de Chile 2016-II
-      <option value="scl2017I">Santiago de Chile 2017-I
-      <option value="scl2017II">Santiago de Chile 2017-II
-      <option value="cdm2017I">Ciudad de México 2017-I
-      <option value="cdm2017II">Ciudad de México 2017-II    
-    </select>
-    <select id="mySelect" onchange="myFunction()">
-      <option value="Teachers">Teachers
-    </select>
-    <select id="mySelect" onchange="myFunction()">
-      <option value="Jedi Masters">Jedi Masters
+      <option value="lima2016II">Lima 2016 - II
+      <option value="lima2017I">Lima 2017 - I
+      <option value="lima2017II">Lima 2017 - II
+      <option value="aqp2016II">Arequipa 2016 - II
+      <option value="aqp2017I">Arequipa 2017 - I
+      <option value="scl2016II">Santiago de Chile 2016 - II
+      <option value="scl2017I">Santiago de Chile 2017 - I
+      <option value="scl2017II">Santiago de Chile 2017 - II
+      <option value="cdm2017I">Ciudad de México 2017 - I
+      <option value="cdm2017II">Ciudad de México 2017 - II
     </select>
   </form>
 </nav>
-<section id="first" class="containerStyle displayNone">
-</section>
+    <section class="display-none container" id="section-display-none" >
+      <div class="container">
+        <div class="indicators-container">
+          <div class="text">ENROLLMENT</div>
+          <div class="value" id="enrolled">###</div>
+          <div class="value" id="dropout">##</div>
+        </div>
+        <div class="indicators-container">
+          <div class="text">ACHIEVEMENT</div>
+          <div class="value" id="achievement">###</div>
+          <div class="value" id="achievement-percent">###</div>
+        </div>
+        <div class="indicators-container">
+          <div class="text">NET PROMOTER SCORE</div>
+          <div class="value" id="cumulative-nps">###</div>
+          <div class="value"id="promoters-passive-detractors">###</div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="text">TECH SKILLS
+          <select class="select-sprint"id="select-sprint-tech">
+            <option value="">Overall(cumulative)</option>
+            <option value="sprint1">Sprint 1</option>
+            <option value="sprint2">Sprint 2</option>
+            <option value="sprint3">Sprint 3</option>
+            <option value="sprint4">Sprint 4</option>
+          </select>
+        </div>
+        <div class="value" id="tech-skills">###</div>
+        <div class="value" id="tech-skills-percent">###</div>
+      </div>
+      <div class="skills">
+        <div class="text">LIFE SKILLS
+          <select class="select-sprint" id="select-sprint-life">
+            <option value="">Overall(cumulative)</option>
+            <option value="sprint1">Sprint 1</option>
+            <option value="sprint2">Sprint 2</option>
+            <option value="sprint3">Sprint 3</option>
+            <option value="sprint4">Sprint 4</option>
+          </select>
+        </div>
+        <div class="value"id="life-skills">###</div>
+        <div class="value"id="life-skills-percent">###</div>
+      </div>
+      <div class="container">
+        <div class="indicators-container">
+          <div class="text">STUDENT SATISFACTION</div>
+          <div class="value"id="student-satisfaction">###</div>
+        </div>
+        <div class="indicators-container">
+          <div class="text">TEACHER RATING</div>
+          <div class="value"id="teacher-rating">##</div>
+        </div>
+        <div class="indicators-container">
+          <div class="text">JEDI MASTER RATING</div>
+          <div class="value"id="jedi-master-rating">###</div>
+        </div>
+      </div>
+    </section>
     <script src="https://use.fontawesome.com/8936b83482.js"></script>
         <!-- Base de datos -->
         <script src="./js/data.js"></script>
