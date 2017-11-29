@@ -1,0 +1,24 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: Montserrat;
+}
+body{
+ background: #A4A4A4 ;
+}
+header{
+ width: 20%;
+ margin: 15px auto;
+}
+#navbar{
+ margin-top: 15px;
+ padding: 20px;
+ background-color: white;
+}
+select{
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 10px;
+}
