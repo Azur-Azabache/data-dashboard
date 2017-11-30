@@ -66,17 +66,46 @@ window.addEventListener('load', function(event) {
     }
     // Funcion para sacar el porcentaje del requisito anterior
 
+    // Funcion para obtener el porcentaje de satisfacción por generación
+    function studentsSatisfaction (obj){
+      var arrSatisfaction = [];
+      var prome = 0;
+      for (var i=0; i<rating.length; i++){
+        var sum = rating[i]['student']['cumple'] + rating[i]['student']['supera'];
+        arrSatisfaction.push(sum);
+      }
+      for (var m = 0; m<arrSatisfaction.length; m++){
+        prome += arrSatisfaction[m];
+      }
+      return prome/rating.length + '%';
+    }
+    // Función para promediar puntaje de profesores
+    function teacherProm (obj){
+      var arr = [];
+      var prome = 0;
+      for (var i = 0; i<rating.length; i++){
+        arr.push(rating[i]['teacher']);
+      }
+      for (var x= 0; x<arr.length; x++){
+        prome += arr[x];
+      }
+      return Math.round(prome/rating.length);
+    }
+
     switch (true) {
     case event.target.value === 'lima2016II':
     // Llenar la cantidad de alumnos por generación y sede
       section.classList.remove('display-none');
       var student = data.LIM['2016-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
       achievement.textContent = countProm(student);
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -111,10 +140,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.LIM['2017-1'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
       achievement.textContent = countProm(student);
+      achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -145,11 +178,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.LIM['2017-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
       achievement.textContent = countProm(student);
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -180,9 +216,13 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.AQP['2016-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -209,9 +249,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.AQP['2017-1'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -237,9 +282,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.SCL['2016-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -273,9 +323,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.SCL['2017-1'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -301,9 +356,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.SCL['2017-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -337,9 +397,14 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.CDMX['2017-1'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievement.textContent = countProm(student);
+      achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -369,9 +434,13 @@ window.addEventListener('load', function(event) {
       section.classList.remove('display-none');
       var student = data.CDMX['2017-2'];
       var arrStudent = student['students'];
+      var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
       dropout.textContent = countOff(student);
+      achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
+      studentSatisfaction.textContent = studentsSatisfaction(rating);
+      teacherRating.textContent = teacherProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
