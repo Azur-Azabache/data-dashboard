@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Laboratoria Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
-     <link href="https://fonts.googleapis.com/css?family=Lato:900|Montserrat" rel="stylesheet">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Dashboard Laboratoria</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100i,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
   <body>
-<header>
-  <img src="assets/images/logo-laboratoria.svg">
-</header>
-<nav>
-  <form id="navbar">
-    <select id="mySelect">
-      <option value="Seleccione">Seleccione
-      <option value="lima2016II">Lima 2016 - II
-      <option value="lima2017I">Lima 2017 - I
-      <option value="lima2017II">Lima 2017 - II
-      <option value="aqp2016II">Arequipa 2016 - II
-      <option value="aqp2017I">Arequipa 2017 - I
-      <option value="scl2016II">Santiago de Chile 2016 - II
-      <option value="scl2017I">Santiago de Chile 2017 - I
-      <option value="scl2017II">Santiago de Chile 2017 - II
-      <option value="cdm2017I">Ciudad de México 2017 - I
-      <option value="cdm2017II">Ciudad de México 2017 - II
-    </select>
-  </form>
-</nav>
+    <header>
+     <img src="assets/images/logo-laboratoria.svg">
+    </header>
+    <nav>
+      <form id="navbar">
+        <select id="mySelect">
+          <option value="Seleccione">SEDES Y GENERACIONES
+          <option value="lima2016II">Lima 2016-II
+          <option value="lima2017I">Lima 2017-I
+          <option value="lima2017II">Lima 2017-II
+          <option value="aqp2016II">Arequipa 2016-II
+          <option value="aqp2017I">Arequipa 2017-I
+          <option value="scl2016II">Santiago de Chile 2016-II
+          <option value="scl2017I">Santiago de Chile 2017-I
+          <option value="scl2017II">Santiago de Chile 2017-II
+          <option value="cdm2017I">Ciudad de México 2017-I
+          <option value="cdm2017II">Ciudad de México 2017-II
+        </select>
+        <select id="mySelect">
+          <option value="Teachers">STUDENTS
+        </select>
+        <select id="mySelect">
+          <option value="Jedi Masters">TEACHERS
+        </select>
+     </form>
+    </nav>
     <section class="display-none container" id="section-display-none" >
       <div class="container">
-        <div class="indicators-container">
+        <div class="indicators-container" id="enrollment">
           <div class="text">ENROLLMENT</div>
           <div class="value" id="enrolled">###</div>
           <div class="value" id="dropout">##</div>
+          <div class="" id="graphic-enrollment"></div>
         </div>
         <div class="indicators-container">
           <div class="text">ACHIEVEMENT</div>
           <div class="value" id="achievement">###</div>
           <div class="value" id="achievement-percent">###</div>
+          <div class="" id="graphic-achievement"></div>
         </div>
         <div class="indicators-container">
           <div class="text">NET PROMOTER SCORE</div>
           <div class="value" id="cumulative-nps">###</div>
-        
+          <div class="value"id="promoters-passive-detractors">###</div>
+          <div class="" id="graphic-net-promoter-score"></div>
         </div>
       </div>
       <div class="skills">
@@ -55,8 +66,11 @@
             <option value="sprint4">Sprint 4</option>
           </select>
         </div>
-        <div class="value" id="tech-skills">###</div>
-        <div class="value" id="tech-skills-percent">###</div>
+        <div class="value value-skills" id="tech-skills">###</div>
+        <div class="value value-skills" id="tech-skills-percent">###</div>
+        <div class="filter-skills" id="graphic-tech-skills-sprint"></div>
+        <div class="tech-skills" id="graphic-tech-skills-sprints"></div>
+        <div class="tech-skills" id="graphic-tech-skills"></div>
       </div>
       <div class="skills">
         <div class="text">LIFE SKILLS
@@ -68,28 +82,35 @@
             <option value="sprint4">Sprint 4</option>
           </select>
         </div>
-        <div class="value"id="life-skills">###</div>
-        <div class="value"id="life-skills-percent">###</div>
+        <div class="value value-skills"id="life-skills">###</div>
+        <div class="value value-skills"id="life-skills-percent">###</div>
+        <div class="filter-skills" id="graphic-life-skills-sprint"></div>
+        <div class="life-skills" id="graphic-lifes-Skills-sprints"></div>
+        <div class="life-skills" id="graphic-lifes-skills"></div>
       </div>
       <div class="container">
         <div class="indicators-container">
           <div class="text">STUDENT SATISFACTION</div>
           <div class="value"id="student-satisfaction">###</div>
+          <div class="" id="graphic-student-satisfaction"></div>
         </div>
         <div class="indicators-container">
           <div class="text">TEACHER RATING</div>
           <div class="value"id="teacher-rating">##</div>
+          <div class="" id="graphic-teacher-rating"></div>
         </div>
         <div class="indicators-container">
           <div class="text">JEDI MASTER RATING</div>
           <div class="value"id="jedi-master-rating">###</div>
+          <div class="" id="graphic-jedi-master-rating"></div>
         </div>
       </div>
     </section>
-    <script src="https://use.fontawesome.com/8936b83482.js"></script>
-        <!-- Base de datos -->
-        <script src="./js/data.js"></script>
-        <!-- Aquí va tus archivos JS -->
+    <!-- Base de datos -->
+    <script src="./js/graphics.js"></script>
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>
