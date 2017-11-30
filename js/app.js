@@ -11,7 +11,6 @@ window.addEventListener('load', function(event) {
   var achievement = document.getElementById('achievement');
   var achievementPercent = document.getElementById('achievement-percent');
   var cumulativeNps = document.getElementById('cumulative-nps');
-  var promotersPassiveDetractors = document.getElementById('promoters-passive-detractors');
   var techSkills = document.getElementById('tech-skills');
   var techSkillsPercent = document.getElementById('tech-skills-percent');
   var lifeSkills = document.getElementById('life-skills');
@@ -103,6 +102,18 @@ window.addEventListener('load', function(event) {
       }
       return Math.round(prome/rating.length);
     }
+    // Función para promediar nps
+    function nps (obj) {
+      var arr = [];
+      var prome = 0;
+      for (var i = 0; i<rating.length; i++) {
+        arr.push(rating[i]['nps']['promoters'] - rating[i]['nps']['detractors']);
+      }
+      for (var x = 0; x < arr.length; x++) {
+        prome += arr[x];
+      }
+      return Math.round(prome/rating.length);
+    }
 
 
     switch (true) {
@@ -120,6 +131,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -163,6 +175,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -202,6 +215,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -241,6 +255,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -276,6 +291,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -310,6 +326,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -352,6 +369,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -386,6 +404,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -428,6 +447,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -465,6 +485,7 @@ window.addEventListener('load', function(event) {
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
+      cumulativeNps.textContent = nps(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
