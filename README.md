@@ -34,6 +34,10 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
 
  - Elaboración de Sketch (prototipo sencillo) sobre de la herramienta web(**dashboard**).
 
+
+  ![sketch](assets/docs/sketch.png)
+
+
  - Testeo del prototipo sencillo para modificar o agregar según la necesidad de las TMs: inserción de gráficos, .
 
  **ETAPA DOS: DESARROLLO (Frond end y Back End)**
@@ -47,5 +51,7 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
    - Se creó dos archivo **javascript** : **"app.js"** donde se encuentran todos los eventos aplicados ( _change_ ) a la etiqueta **select. my-select** que se encuentra en la etiqueta **nav**, a las etiquetas **select.select-sprint-life** y **select.select-sprint-tech**  que se encuentran en la etiqueta **section. display-none**; y el archivo  **graphic.js** donde se encuentran las funciones generales(globales) de las gráficas ingresadas utilizando la herramienta **"chart google"** las cuales son llamadas en los eventos aplicados en **app.js**.
 
   **ETAPA TRES: CRECIMIENTO**
-  
+
   En esta etapa se probar el producto desarrollado para recibir feed back y seguir mejorandolo para que siga cumpliendo mejores expectativas.
+
+   ***
