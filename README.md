@@ -40,8 +40,12 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
 
   Etapa de elaboración del producto en código. Se realizó lo siguientes:
 
-   -  Se creó un Archivo HTML donde figura: **header** (logo de laboratoria), **nav** ( barra de navegación: sedes y generaciones (contenida en una etiqueta **selection. my select** a quien se le aplicará el EVENTO UNO: CHANGE), students y teachers),  **section** (Se encuentra toda la información concerniente a los indicadores solicitados a mostrar. Dicha sección se encuentra con la propiedad ** display: none** para que cuando apliquemos en el evento **change** a la etiqueta selection ** SEDE Y GENERACIONES**,  aparezca la section ).
+   -  Se creó un Archivo HTML donde figura: **header** (logo de laboratoria), **nav** ( barra de navegación: sedes y generaciones (contenida en una etiqueta **selection. my-select** a quien se le aplicará el EVENTO UNO: CHANGE), students y teachers),  **section. dispplay-none** (Se encuentra toda la información concerniente a los indicadores solicitados a mostrar. Dicha sección se encuentra con la propiedad ** display: none** para que cuando apliquemos en el evento **change** a la etiqueta selection ** SEDE Y GENERACIONES**,  aparezca la section. También se encuentra los filtros para TECH SKILLS y LIFE SKILLS a quien se les aplicara el EVENTO DOS:CHANGE ).
 
-   - Se creó un archivo **main.css** donde se encuentran todos los estilos aplicados a todas la partes del body del documento HTML, y los estilos a los elementos creados en el archivo javascript.
+   - Se creó un archivo **main.css** donde se encuentran todos los estilos aplicados a todas la partes del body del documento HTML. No hubo la necesidad de crear estilos para los eventos ya que no se creo ningun elemento en el DOM.
 
-   - Se creó un archivo **javascript** donde se encuentran todos los eventos aplicados ( _click_ ) a la **section-father**, **second-section** y a los elementos creados en el DOM.
+   - Se creó dos archivo **javascript** : **"app.js"** donde se encuentran todos los eventos aplicados ( _change_ ) a la etiqueta **select. my-select** que se encuentra en la etiqueta **nav**, a las etiquetas **select.select-sprint-life** y **select.select-sprint-tech**  que se encuentran en la etiqueta **section. display-none**; y el archivo  **graphic.js** donde se encuentran las funciones generales(globales) de las gráficas ingresadas utilizando la herramienta **"chart google"** las cuales son llamadas en los eventos aplicados en **app.js**.
+
+  **ETAPA TRES: CRECIMIENTO**
+  
+  En esta etapa se probar el producto desarrollado para recibir feed back y seguir mejorandolo para que siga cumpliendo mejores expectativas.
