@@ -28,9 +28,22 @@ window.addEventListener('load', function(event) {
   function showGeneration(event) {
     switch (true) {
     case event.target.value === 'lima2016II':
-      console.log(section);
+    // Llenar la cantidad de alumnos por generación y sede
       section.classList.remove('display-none');
-      /* 13 funciones*/
+      var student = data.LIM['2016-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -63,6 +76,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'lima2017I':
       section.classList.remove('display-none');
+      var student = data.LIM['2017-1'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -90,7 +117,21 @@ window.addEventListener('load', function(event) {
       }*/
       break;
     case event.target.value === 'lima2017II':
-      selector.appendChild(optionThree);
+      section.classList.remove('display-none');
+      var student = data.LIM['2017-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -118,6 +159,21 @@ window.addEventListener('load', function(event) {
       }*/
       break;
     case event.target.value === 'aqp2016II':
+      section.classList.remove('display-none');
+      var student = data.AQP['2016-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -142,6 +198,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'aqp2017I':
       section.classList.remove('display-none');
+      var student = data.AQP['2017-1'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -165,6 +235,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'scl2016II':
       section.classList.remove('display-none');
+      var student = data.SCL['2016-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -196,6 +280,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'scl2017I':
       section.classList.remove('display-none');
+      var student = data.SCL['2017-1'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -219,6 +317,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'scl2017II':
       section.classList.remove('display-none');
+      var student = data.SCL['2017-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -250,6 +362,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'cdm2017I':
       section.classList.remove('display-none');
+      var student = data.CDMX['2017-1'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -277,6 +403,20 @@ window.addEventListener('load', function(event) {
       break;
     case event.target.value === 'cdm2017II':
       section.classList.remove('display-none');
+      var student = data.CDMX['2017-2'];
+      var arrStudent = student['students'];
+      enrolled.textContent = arrStudent.length;
+      // Llenar la cantidad de alumnos desertores
+      function countOff(obj) {
+        var counter = 0;
+        for (var i = 0; i < arrStudent.length; i++) {
+          if (arrStudent[i]['active'] === false) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
