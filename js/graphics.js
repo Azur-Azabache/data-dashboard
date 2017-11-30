@@ -65,7 +65,7 @@ function techSkillsGraphic(techGoalAccomplished, techGoalNotMet) {
   ]
   );
   var opciones = {'width': 400,
-    'height': 250,
+    'height': 320,
   };
   var graphic = new google.visualization.PieChart(document.getElementById('graphic-tech-skills'));
   graphic.draw(data, opciones);
@@ -83,8 +83,8 @@ function techSkillsSprintsGraphic(techSprintOne, techSprintTwo, techSprintThree,
     ['Sprint 4', techSprintFour]
   ]
   );
-  var opciones = {'width': 400,
-    'height': 250,
+  var opciones = {'width': 530,
+    'height': 360,
   };
   var graphic = new google.visualization.ColumnChart(document.getElementById('graphic-tech-skills-sprints'));
   graphic.draw(data, opciones);
@@ -101,7 +101,7 @@ function techSkillsSprintGraphic(techGoalAccomplishedSprint, techGoalNotMetSprin
   ]
   );
   var opciones = {'width': 300,
-    'height': 200,
+    'height': 180,
   };
   var graphic = new google.visualization.PieChart(document.getElementById('graphic-tech-skills-sprint'));
   graphic.draw(data, opciones);
@@ -118,8 +118,8 @@ function lifesSkillsGraphic(lifeGoalAccomplished, lifeGoalNotMet) {
     ['Students that not meet attitudinal goal', lifeGoalNotMet]
   ]
   );
-  var opciones = {'width': 300,
-    'height': 180,
+  var opciones = {'width': 400,
+    'height': 320,
   };
   var graphic = new google.visualization.PieChart(document.getElementById('graphic-lifes-skills'));
   graphic.draw(data, opciones);
@@ -137,8 +137,8 @@ function lifeSkillsSprintsGraphic(lifeSprintOne, lifeSprintTwo, lifeSprintThree,
     ['Sprint 4', lifeSprintFour]
   ]
   );
-  var opciones = {'width': 300,
-    'height': 160,
+  var opciones = {'width': 530,
+    'height': 360,
   };
   var graphic = new google.visualization.ColumnChart(document.getElementById('graphic-lifes-Skills-sprints'));
   graphic.draw(data, opciones);

@@ -1,3 +1,4 @@
+/* ASEGURAMOS QUE LA PAGINA CARGUE ANTES DE APLICAR LOS EVENTOS*/
 window.addEventListener('load', function(event) {
   var selectGeneration = document.getElementById('mySelect');
   var section = document.getElementById('section-display-none');
@@ -46,8 +47,6 @@ window.addEventListener('load', function(event) {
       teacherRatingGraphic(35, 54, 23, 22);
       /* Llamando a la funcion de la GRAFICO JEDI MASTER RATING (ver graphics.js)"aqp2016II"*/
       jediMasterRatingGraphic(34, 12, 23, 34);
-
-      /* 13 funciones*/
       /* Evento para tech y life por sprint*/
       selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -76,10 +75,13 @@ window.addEventListener('load', function(event) {
           lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -98,14 +100,17 @@ window.addEventListener('load', function(event) {
       teacherRatingGraphic(35, 54, 23);
       jediMasterRatingGraphic(34, 12, 23);
       /* Evento para tech y life por sprint*/
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -114,14 +119,17 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'cdm2017I':
       section.classList.remove('display-none');
@@ -136,14 +144,17 @@ window.addEventListener('load', function(event) {
       teacherRatingGraphic(35, 54, 23);
       jediMasterRatingGraphic(34, 12, 23);
       /* Evento para tech y life por sprint*/
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -152,14 +163,17 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'cdm2017II':
       section.classList.remove('display-none');
@@ -174,12 +188,14 @@ window.addEventListener('load', function(event) {
       teacherRatingGraphic(35, 54);
       jediMasterRatingGraphic(34, 12);
       /* Evento para tech y life por sprint*/
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -188,12 +204,14 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'lima2016II':
       section.classList.remove('display-none');
@@ -207,12 +225,16 @@ window.addEventListener('load', function(event) {
       studentSatisfactionGraphic(3, 5);
       teacherRatingGraphic(35, 54);
       jediMasterRatingGraphic(34, 12);
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      /* Evento para tech y life por sprint*/
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
+
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -221,12 +243,14 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'lima2017I':
       section.classList.remove('display-none');
@@ -240,16 +264,20 @@ window.addEventListener('load', function(event) {
       studentSatisfactionGraphic(3, 5, 32, 34);
       teacherRatingGraphic(35, 54, 23, 34);
       jediMasterRatingGraphic(34, 12, 45, 36);
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -258,16 +286,20 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'lima2017II':
       section.classList.remove('display-none');
@@ -281,12 +313,14 @@ window.addEventListener('load', function(event) {
       studentSatisfactionGraphic(3, 5);
       teacherRatingGraphic(35, 54);
       jediMasterRatingGraphic(34, 12);
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -295,12 +329,14 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'scl2016II':
       section.classList.remove('display-none');
@@ -315,16 +351,20 @@ window.addEventListener('load', function(event) {
       teacherRatingGraphic(35, 54, 5, 34);
       jediMasterRatingGraphic(34, 4, 45, 36);
 
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -333,16 +373,20 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'scl2017I':
       section.classList.remove('display-none');
@@ -356,14 +400,17 @@ window.addEventListener('load', function(event) {
       studentSatisfactionGraphic(3, 34, 32);
       teacherRatingGraphic(35, 54, 56);
       jediMasterRatingGraphic(34, 12, 32);
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -372,14 +419,17 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
+      }
       break;
     case event.target.value === 'scl2017II':
       section.classList.remove('display-none');
@@ -393,12 +443,14 @@ window.addEventListener('load', function(event) {
       studentSatisfactionGraphic(3, 34);
       teacherRatingGraphic(35, 34);
       jediMasterRatingGraphic(34, 23);
-      /* selectSprintTech.addEventListener('change', showSprintTech);
+      selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -407,13 +459,14 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
-      }*/
-
+      }
       break;
     default:
       section.classList.add('display-none');
