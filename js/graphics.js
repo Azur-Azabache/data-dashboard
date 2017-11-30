@@ -4,8 +4,8 @@ google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(enrollmentGraphic);
 function enrollmentGraphic(dropout, students) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     [' Deserting Students', dropout],
     ['Active Students', students]
@@ -21,8 +21,8 @@ function enrollmentGraphic(dropout, students) {
 google.charts.setOnLoadCallback(achievementGraphic);
 function achievementGraphic(goalAccomplished, goalNotMet) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Students that meet the target ', goalAccomplished],
     ['Students that not meet the target', goalNotMet]
@@ -38,8 +38,8 @@ function achievementGraphic(goalAccomplished, goalNotMet) {
 google.charts.setOnLoadCallback(netPromoterScoreGraphic);
 function netPromoterScoreGraphic(promoters, passive, detractors) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Promoters', promoters],
     ['Passive', passive],
@@ -57,8 +57,8 @@ function netPromoterScoreGraphic(promoters, passive, detractors) {
 google.charts.setOnLoadCallback(techSkillsGraphic);
 function techSkillsGraphic(techGoalAccomplished, techGoalNotMet) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Students that meet the technological goal', techGoalAccomplished],
     ['Students that not meet technological goal', techGoalNotMet]
@@ -70,12 +70,12 @@ function techSkillsGraphic(techGoalAccomplished, techGoalNotMet) {
   var graphic = new google.visualization.PieChart(document.getElementById('graphic-tech-skills'));
   graphic.draw(data, opciones);
 }
-/* Grafico especifico(por sprint): total de estudiantes que superan la meta de puntos tÉcnicos en promedio por sprint*/
+/* Grafico especifico(por sprint): total de estudiantes que superan la meta de puntos tÉcnicos en promedio por sprints*/
 google.charts.setOnLoadCallback(techSkillsSprintsGraphic);
 function techSkillsSprintsGraphic(techSprintOne, techSprintTwo, techSprintThree, techSprintFour) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Sprint 1', techSprintOne],
     ['Sprint 2', techSprintTwo],
@@ -86,7 +86,24 @@ function techSkillsSprintsGraphic(techSprintOne, techSprintTwo, techSprintThree,
   var opciones = {'width': 400,
     'height': 250,
   };
-  var graphic = new google.visualization.PieChart(document.getElementById('graphic-tech-skills-sprints'));
+  var graphic = new google.visualization.ColumnChart(document.getElementById('graphic-tech-skills-sprints'));
+  graphic.draw(data, opciones);
+}
+/* Grafico : total de estudiantes que superan la meta de puntos tÉcnicos en promedio por SPRINT*/
+google.charts.setOnLoadCallback(techSkillsSprintGraphic);
+function techSkillsSprintGraphic(techGoalAccomplishedSprint, techGoalNotMetSprint) {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
+  data.addRows([
+    ['Students that meet the technological goal for sprint', techGoalAccomplishedSprint],
+    ['Students that not meet technological goal for sprint', techGoalNotMetSprint]
+  ]
+  );
+  var opciones = {'width': 300,
+    'height': 200,
+  };
+  var graphic = new google.visualization.PieChart(document.getElementById('graphic-tech-skills-sprint'));
   graphic.draw(data, opciones);
 }
 /* GRAFICO PARA LA CONTENEDOR DIV "LIFE SKILLS" */
@@ -94,8 +111,8 @@ function techSkillsSprintsGraphic(techSprintOne, techSprintTwo, techSprintThree,
 google.charts.setOnLoadCallback(lifesSkillsGraphic);
 function lifesSkillsGraphic(lifeGoalAccomplished, lifeGoalNotMet) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Students that meet the attitudinal goal', lifeGoalAccomplished],
     ['Students that not meet attitudinal goal', lifeGoalNotMet]
@@ -111,8 +128,8 @@ function lifesSkillsGraphic(lifeGoalAccomplished, lifeGoalNotMet) {
 google.charts.setOnLoadCallback(lifeSkillsSprintsGraphic);
 function lifeSkillsSprintsGraphic(lifeSprintOne, lifeSprintTwo, lifeSprintThree, lifeSprintFour) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Sprint 1', lifeSprintOne],
     ['Sprint 2', lifeSprintTwo],
@@ -123,15 +140,32 @@ function lifeSkillsSprintsGraphic(lifeSprintOne, lifeSprintTwo, lifeSprintThree,
   var opciones = {'width': 300,
     'height': 160,
   };
-  var graphic = new google.visualization.PieChart(document.getElementById('graphic-lifes-Skills-sprints'));
+  var graphic = new google.visualization.ColumnChart(document.getElementById('graphic-lifes-Skills-sprints'));
+  graphic.draw(data, opciones);
+}
+/* Grafico : total de estudiantes que superan la meta de puntos tÉcnicos en promedio por SPRINT*/
+google.charts.setOnLoadCallback(lifeSkillsSprintGraphic);
+function lifeSkillsSprintGraphic(lifeGoalAccomplishedSprint, lifeGoalNotMetSprint) {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
+  data.addRows([
+    ['Students that meet the attitudinal goal for sprint', lifeGoalAccomplishedSprint],
+    ['Students that not meet attitudinal goal for sprint', lifeGoalNotMetSprint]
+  ]
+  );
+  var opciones = {'width': 300,
+    'height': 200,
+  };
+  var graphic = new google.visualization.PieChart(document.getElementById('graphic-life-skills-sprint'));
   graphic.draw(data, opciones);
 }
 /* GRAFICO PARA LA CONTENEDOR DIV "STUDENT SATISFACTION" */
 google.charts.setOnLoadCallback(studentSatisfactionGraphic);
 function studentSatisfactionGraphic(studentSatisfactionOne, studentSatisfactionTwo, studentSatisfactionThree, studentSatisfactionFour) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Sprint 1', studentSatisfactionOne],
     ['Sprint 2', studentSatisfactionTwo],
@@ -142,15 +176,15 @@ function studentSatisfactionGraphic(studentSatisfactionOne, studentSatisfactionT
   var opciones = {'width': 350,
     'height': 180,
   };
-  var graphic = new google.visualization.PieChart(document.getElementById('graphic-student-satisfaction'));
+  var graphic = new google.visualization.ComboChart(document.getElementById('graphic-student-satisfaction'));
   graphic.draw(data, opciones);
 }
 /* GRAFICO PARA LA CONTENEDOR DIV "TEACHER RATING" */
 google.charts.setOnLoadCallback(teacherRatingGraphic);
 function teacherRatingGraphic(teacherRatingOne, teacherRatingTwo, teacherRatingThree, teacherRatingFour) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Sprint 1', teacherRatingOne],
     ['Sprint 2', teacherRatingTwo],
@@ -161,15 +195,15 @@ function teacherRatingGraphic(teacherRatingOne, teacherRatingTwo, teacherRatingT
   var opciones = {'width': 350,
     'height': 180,
   };
-  var graphic = new google.visualization.PieChart(document.getElementById('graphic-teacher-rating'));
+  var graphic = new google.visualization.ComboChart(document.getElementById('graphic-teacher-rating'));
   graphic.draw(data, opciones);
 }
 /* GRAFICO PARA LA CONTENEDOR DIV "JEDI MASTER RATING" */
 google.charts.setOnLoadCallback(jediMasterRatingGraphic);
 function jediMasterRatingGraphic(jediMasterRatingOne, jediMasterRatingTwo, jediMasterRatingThree, jediMasterRatingFour) {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'alumnas');
-  data.addColumn('number', 'count');
+  data.addColumn('string', 'students');
+  data.addColumn('number', 'quantity');
   data.addRows([
     ['Sprint 1', jediMasterRatingOne],
     ['Sprint 2', jediMasterRatingTwo],
@@ -180,6 +214,6 @@ function jediMasterRatingGraphic(jediMasterRatingOne, jediMasterRatingTwo, jediM
   var opciones = {'width': 350,
     'height': 180,
   };
-  var graphic = new google.visualization.PieChart(document.getElementById('graphic-jedi-master-rating'));
+  var graphic = new google.visualization.ComboChart(document.getElementById('graphic-jedi-master-rating'));
   graphic.draw(data, opciones);
 }
