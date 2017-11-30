@@ -91,6 +91,19 @@ window.addEventListener('load', function(event) {
       }
       return Math.round(prome/rating.length);
     }
+    //Función para promediar puntaje de Jedis Masters
+    function jdProm (obj){
+      var arr = [];
+      var prome = 0;
+      for (var i = 0; i<rating.length; i++){
+        arr.push(rating[i]['jedi']);
+      }
+      for (var x= 0; x<arr.length; x++){
+        prome += arr[x];
+      }
+      return Math.round(prome/rating.length);
+    }
+
 
     switch (true) {
     case event.target.value === 'lima2016II':
@@ -106,6 +119,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -148,6 +162,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -186,6 +201,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -219,10 +235,12 @@ window.addEventListener('load', function(event) {
       var rating = student['ratings'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
+      dropout.textContent = countOff(student);
       achievement.textContent = countProm(student);
       achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -257,6 +275,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -290,6 +309,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -331,6 +351,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -364,6 +385,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -405,6 +427,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = Math.round((countProm(student) * 100) / arrStudent.length) + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
@@ -441,6 +464,7 @@ window.addEventListener('load', function(event) {
       achievementPercent.textContent = (countProm(student) * 100) / arrStudent.length + '%';
       studentSatisfaction.textContent = studentsSatisfaction(rating);
       teacherRating.textContent = teacherProm(rating);
+      jediMasterRating.textContent = jdProm(rating);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
