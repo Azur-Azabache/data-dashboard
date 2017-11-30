@@ -25,7 +25,19 @@ window.addEventListener('load', function(event) {
   /* EVENTO CHANGE PARA EL FILTRO POR GENERACIONES*/
   selectGeneration.addEventListener('change', showGeneration);
   /* Función a ejecutar*/
+  // Funcion para llenar la cantidad de alumnos desertores
+
   function showGeneration(event) {
+    function countOff(obj) {
+      var counter = 0;
+      for (var i = 0; i < arrStudent.length; i++) {
+        if (arrStudent[i]['active'] === false) {
+          counter++;
+        }
+      }
+      return counter;
+    }
+
     switch (true) {
     case event.target.value === 'lima2016II':
     // Llenar la cantidad de alumnos por generación y sede
@@ -34,15 +46,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
@@ -80,15 +83,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
@@ -122,15 +116,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
@@ -164,15 +149,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* Evento para tech y life por sprint*/
       /* selectSprintTech.addEventListener('change', showSprintTech);
@@ -202,15 +178,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -239,15 +206,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -284,15 +242,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -321,15 +270,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -366,15 +306,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
@@ -407,15 +338,6 @@ window.addEventListener('load', function(event) {
       var arrStudent = student['students'];
       enrolled.textContent = arrStudent.length;
       // Llenar la cantidad de alumnos desertores
-      function countOff(obj) {
-        var counter = 0;
-        for (var i = 0; i < arrStudent.length; i++) {
-          if (arrStudent[i]['active'] === false) {
-            counter++;
-          }
-        }
-        return counter;
-      }
       dropout.textContent = countOff(student);
       /* selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
