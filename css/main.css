@@ -7,7 +7,28 @@
 }
 body {
   width: 100%;
-
+  background: #A4A4A4 ;
+}
+header{
+ width: 20%;
+ margin: 15px auto;
+}
+#navbar{
+ margin-top: 15px;
+ padding: 20px;
+ background-color: white;
+}
+select{
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 10px;
+}
+/* CLASES REUTILIZABLES*/
+/* nuevo*/
+.select-sprint {
+  font-size: 14px;
+  border-bottom: 3px solid rgb(255, 165, 0);
 }
 /* ESTILOS A SECTION DE CLASE "DISPLAY NONE"*/
 section.display-none {
@@ -18,7 +39,7 @@ section.container {
   height: 100;
   outline: 1px solid green;
   margin: 100px 0  0 108px;
-  /*padding: 45px;*/
+  padding: 100px 45px;/* nuevo*/
   background-color: rgb(240, 240, 240);
 }
 section.container div.container {
